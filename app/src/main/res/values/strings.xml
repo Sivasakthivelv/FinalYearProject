@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Exam Application</string>
+    <string name="register">Register</string>
+    <string name="name">Name</string>
+    <string name="register_no">Register No</string>
+    <string name="department">Department</string>
+    <string name="email">Email id</string>
+    <string name="phone">Phone No</string>
+    <string name="password">Password</string>
+    <string name="subject">Subject</string>
+
+</resources>

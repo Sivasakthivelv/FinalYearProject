@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:id="@+id/rlt_header"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="5dp"
+            app:tint="@color/black"
+            android:src="@drawable/ic_back_24" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_toEndOf="@+id/iv_back"
+            android:paddingTop="5dp"
+            android:text="@string/register"
+            android:textColor="@color/black"
+            android:textSize="22sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rlt_header"
+        android:layout_marginTop="10dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp">
+
+
+            <EditText
+                android:id="@+id/tv_name"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/button_curvey"
+                android:hint="@string/name"
+                android:padding="5dp" />
+
+            <EditText
+                android:id="@+id/tv_regno"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/tv_name"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/button_curvey"
+                android:hint="@string/register_no"
+                android:padding="5dp" />
+
+            <EditText
+                android:id="@+id/tv_department"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/tv_regno"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/button_curvey"
+                android:hint="@string/department"
+                android:padding="5dp" />
+
+            <EditText
+                android:id="@+id/tv_email"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/tv_department"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/button_curvey"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                android:padding="5dp" />
+
+            <EditText
+                android:id="@+id/tv_phone"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/tv_email"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/button_curvey"
+                android:hint="@string/phone"
+                android:inputType="phone"
+                android:padding="5dp" />
+
+            <EditText
+                android:id="@+id/tv_password"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/tv_phone"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/button_curvey"
+                android:hint="@string/password"
+                android:padding="5dp" />
+
+            <Button
+                android:id="@+id/btn_submit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="40dp"
+                android:layout_below="@+id/tv_password"
+                android:background="@drawable/button_curvey_common"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="Submit"
+                android:textColor="@color/black"
+                android:textSize="30dp" />
+        </RelativeLayout>
+    </ScrollView>
+
+
+
+</RelativeLayout>
