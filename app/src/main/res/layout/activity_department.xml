@@ -53,12 +53,13 @@
         </TextView>
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/tv_choose_department"
             android:layout_marginTop="150dp"
-            tools:listitem="@layout/department_adapter"
-            android:padding="10dp" />
+            android:padding="10dp"
+            tools:listitem="@layout/department_adapter" />
 
     </RelativeLayout>
 

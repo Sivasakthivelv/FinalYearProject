@@ -2,30 +2,33 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/ic_medium_bg">
     <RelativeLayout
         android:id="@+id/rlt_header"
-        android:background="@color/white"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
 
         <ImageView
             android:id="@+id/iv_back"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_margin="5dp"
-            app:tint="@color/black"
-            android:src="@drawable/ic_back_24" />
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_back_24"
+            app:tint="@color/white" />
 
         <TextView
             android:id="@+id/tv_title"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
             android:layout_marginStart="20dp"
-            android:layout_toEndOf="@+id/iv_back"
             android:paddingTop="5dp"
             android:text="@string/register"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="22sp" />
     </RelativeLayout>
 
@@ -109,15 +112,15 @@
                 android:id="@+id/btn_submit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginTop="40dp"
                 android:layout_below="@+id/tv_password"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
                 android:background="@drawable/button_curvey_common"
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp"
                 android:text="Submit"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="30dp" />
         </RelativeLayout>
     </ScrollView>

@@ -4,16 +4,16 @@ import android.content.Context;
 import android.content.SharedPreferences;
 
 public class LocalData {
-    private final Context context;
-    SharedPreferences sharedPref ;
+    private  Context context;
+    private SharedPreferences pref;
+
+    public final static String PREFS_NAME = "appname_prefs";
 
 
     public LocalData(Context context){
         this.context = context;
-        sharedPref =context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
+        pref = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
     }
-
-    public final static String PREFS_NAME = "appname_prefs";
 
     public boolean sharedPreferenceExist(String key)
     {
@@ -27,39 +27,49 @@ public class LocalData {
     }
 
     public  void setInt( String key, int value) {
-        sharedPref= context.getSharedPreferences(PREFS_NAME,0);
-        SharedPreferences.Editor editor = sharedPref.edit();
+        SharedPreferences prefs = context.getSharedPreferences(PREFS_NAME,0);
+        SharedPreferences.Editor editor = prefs.edit();
         editor.putInt(key, value);
         editor.apply();
     }
 
     public  int getInt(String key) {
-        sharedPref = context.getSharedPreferences(PREFS_NAME, 0);
-        return sharedPref.getInt(key, 0);
+        SharedPreferences prefs = context.getSharedPreferences(PREFS_NAME, 0);
+        return prefs.getInt(key, 0);
     }
 
-    public  void setStr(String key, String value) {
-        sharedPref = context.getSharedPreferences(PREFS_NAME,0);
-        SharedPreferences.Editor editor = sharedPref.edit();
+    public void setStr(String key, String value) {
+        SharedPreferences prefs = context.getSharedPreferences(PREFS_NAME,0);
+        SharedPreferences.Editor editor = prefs.edit();
         editor.putString(key, value);
         editor.apply();
     }
 
     public  String getStr(String key) {
-        sharedPref = context.getSharedPreferences(PREFS_NAME, 0);
-        return sharedPref.getString(key,"DNF");
+        SharedPreferences prefs = context.getSharedPreferences(PREFS_NAME, 0);
+        return prefs.getString(key,"");
     }
 
     public  void setBool(String key, boolean value) {
-        sharedPref = context.getSharedPreferences(PREFS_NAME,0);
-        SharedPreferences.Editor editor = sharedPref.edit();
+        SharedPreferences prefs = context.getSharedPreferences(PREFS_NAME,0);
+        SharedPreferences.Editor editor = prefs.edit();
         editor.putBoolean(key, value);
         editor.apply();
     }
 
     public  boolean getBool(String key) {
-        sharedPref= context.getSharedPreferences(PREFS_NAME, 0);
-        return sharedPref.getBoolean(key,false);
+        SharedPreferences prefs = context.getSharedPreferences(PREFS_NAME, 0);
+        return prefs.getBoolean(key,false);
     }
+
+    public void setModelStr(String key, String value) {
+        SharedPreferences prefs = context.getSharedPreferences(PREFS_NAME,0);
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putString(key, value);
+        editor.apply();
+    }
+
+
+
 
 }

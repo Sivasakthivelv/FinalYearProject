@@ -4,33 +4,33 @@ import android.content.Context;
 
 public class SessionManager {
 
+    Context context;
     LocalData localData;
 
-    public SessionManager(Context context){
+
+    public SessionManager(Context context) {
+        this.context = context;
         localData = new LocalData(context);
     }
-    String userLogin =" onum illa";
-    Boolean  logged = false;
 
-    public Boolean getLogged() {
-        localData.getBool("logged");
-        return logged;
+    String name = "";
+
+    public String getName() {
+        return localData.getStr("name");
     }
 
-    public void setLogged(Boolean logged) {
-        localData.setBool("logged",logged);
-        this.logged = logged;
+    public void setName(String name) {
+        localData.setStr("name",name);
+        this.name = name;
     }
 
-    public String getUserLogin() {
-        localData.getStr("userlogin");
-        return userLogin;
+    public void setuserLogin(String userLogin){
+        localData.setStr("userLogin",userLogin);
+    }
+    public String getuserLogin(){
+        return localData.getStr("userLogin");
     }
 
-    public void setUserLogin(String userLogin) {
-        localData.setStr("userlogin",userLogin);
-        this.userLogin = userLogin;
-    }
 
 
 }

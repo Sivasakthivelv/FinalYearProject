@@ -13,7 +13,8 @@ public class SplashActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-        sessionManager =  new SessionManager(this);
+
+        sessionManager = new SessionManager(this);
         openActivity();
     }
     public void openActivity() {
@@ -26,15 +27,15 @@ public class SplashActivity extends AppCompatActivity {
         }, 3000);
     }
     public void redirection(){
-       // if (sessionManager.getLogged()){
-            Intent main  =  new Intent(this,DepartmentPage.class);
+        if (sessionManager.getuserLogin().equals("")){
+            Intent main  =  new Intent(this,SigninSignupActivity.class);
             startActivity(main);
             finish();
-      /*  }else{
-            Intent intent = new Intent(this,SigninSignupActivity.class);
+        }else{
+            Intent intent = new Intent(this,DepartmentPage.class);
             startActivity(intent);
             finish();
-        }*/
+        }
 
     }
 

@@ -42,7 +42,8 @@ public class RegisterActivty  extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-        sessionManager =  new SessionManager(this);
+        sessionManager = new SessionManager(this);
+
         initview();
 
         btn_submit.setOnClickListener(new View.OnClickListener() {
@@ -50,9 +51,10 @@ public class RegisterActivty  extends AppCompatActivity {
             public void onClick(View view) {
                if (vaildData()){
                    Toast.makeText(getApplicationContext(), "Success", Toast.LENGTH_LONG).show();
-                   Intent intent = new Intent(RegisterActivty.this,MainActivity.class);
-                   sessionManager.setLogged(true);
+                   Intent intent = new Intent(RegisterActivty.this,DepartmentPage.class);
+                   sessionManager.setuserLogin("isLogin");
                    startActivity(intent);
+                   finish();
                }
             }
         });
